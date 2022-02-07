@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace API.Infrastructure.Specifications
+namespace API.Core.Specifications
 {
     public class BaseSpecification<T> : ISpecification<T>
     {
+        public BaseSpecification()
+        {
+
+        }
         public BaseSpecification(Expression<Func<T,bool>> criteria)
         {
             Criteria = criteria;
